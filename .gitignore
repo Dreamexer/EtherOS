@@ -35,3 +35,12 @@ compile_commands.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Local logs
+buildlog.txt
+
+# ESP-IDF generated
+dependencies.lock
+
+# Temporary editor files
+*.orig
