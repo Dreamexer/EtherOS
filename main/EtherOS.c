@@ -1,13 +1,20 @@
 #include <stdio.h>
 
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+
+#include "display.h"
+
 void app_main(void)
 {
-    printf("\n");
-    printf("=========================\n");
-    printf("      EtherOS v0.1\n");
-    printf("=========================\n");
+    printf("EtherOS booting...\n");
+
+    display_init();
+    display_clear();
+    display_splash();
 
     while (1)
     {
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
